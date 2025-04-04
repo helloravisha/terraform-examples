@@ -1,6 +1,6 @@
 # Terraform Examples Repository
 
-This repository contains a collection of practical Terraform examples demonstrating various features, from basic syntax to advanced modules and state management.
+This repository contains a collection of practical Terraform examples demonstrating various features.
 
 
 
