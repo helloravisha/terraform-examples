@@ -80,7 +80,7 @@ Examples related to **Terraform state** operations:
 - Locking and state file security
 
 - ✅ Configure remote backend (e.g., S3 + DynamoDB)
-- ✅ Perform state imports and taints
+
 
 ---
 
