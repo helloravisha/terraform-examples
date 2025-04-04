@@ -2,7 +2,7 @@
 
 This repository contains a collection of practical Terraform examples demonstrating various features, from basic syntax to advanced modules and state management.
 
-## 📁 Project Structure
+
 
 ### 1. `terraform-datasources`
 Examples demonstrating how to use Terraform **data sources** to fetch and reference information defined outside the Terraform configuration (e.g., AWS AMIs, existing infrastructure).
