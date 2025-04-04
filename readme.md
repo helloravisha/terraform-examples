@@ -12,15 +12,7 @@ Examples demonstrating how to use Terraform **data sources** to fetch and refere
 
 ---
 
-### 2. `main.tf`
-A standalone or root-level Terraform file, typically used to declare resources, providers, and configurations in a minimal or test setup.
-
-- ✅ Entry point for testing resources
-- ✅ Can include simple infrastructure examples
-
----
-
-### 3. `terraform-functions`
+### 2. `terraform-functions`
 Showcases usage of **built-in Terraform functions** such as `join`, `lookup`, `element`, `concat`, etc.
 
 - ✅ Explore string, numeric, and collection functions
@@ -28,7 +20,7 @@ Showcases usage of **built-in Terraform functions** such as `join`, `lookup`, `e
 
 ---
 
-### 4. `terraform-helloworld`
+### 3. `terraform-helloworld`
 A simple "Hello World"-style example to bootstrap Terraform learning.
 
 - ✅ Configure a basic provider (like AWS)
@@ -36,7 +28,7 @@ A simple "Hello World"-style example to bootstrap Terraform learning.
 
 ---
 
-### 5. `terraform-loops`
+### 4. `terraform-loops`
 Examples on using **`for_each`**, **`count`**, and **`for` loops** in Terraform to dynamically create resources.
 
 - ✅ `for_each` with maps and sets
@@ -45,7 +37,7 @@ Examples on using **`for_each`**, **`count`**, and **`for` loops** in Terraform 
 
 ---
 
-### 6. `terraform-modules`
+### 5. `terraform-modules`
 Demonstrates how to organize and reuse code via **Terraform modules**.
 
 - ✅ Create and consume local modules
@@ -54,7 +46,7 @@ Demonstrates how to organize and reuse code via **Terraform modules**.
 
 ---
 
-### 7. `terraform-provisioner`
+### 6. `terraform-provisioner`
 Shows how to use **provisioners** like `remote-exec` and `file` to perform actions on a resource after it's created.
 
 - ✅ Use inline shell scripts for post-creation setup
@@ -62,7 +54,7 @@ Shows how to use **provisioners** like `remote-exec` and `file` to perform actio
 
 ---
 
-### 8. `terraform-secret`
+### 7. `terraform-secret`
 Demonstrates best practices for **handling secrets** in Terraform using:
 - Environment variables
 - Sensitive variables
@@ -73,7 +65,7 @@ Demonstrates best practices for **handling secrets** in Terraform using:
 
 ---
 
-### 9. `terraform-state-management`
+### 8. `terraform-state-management`
 Examples related to **Terraform state** operations:
 - Backends
 - Remote state
@@ -84,7 +76,7 @@ Examples related to **Terraform state** operations:
 
 ---
 
-### 10. `terraform-workspaces`
+### 9. `terraform-workspaces`
 Covers **Terraform workspaces**, which are used to manage multiple environments (e.g., dev, staging, prod) from the same configuration.
 
 - ✅ Create and switch workspaces
