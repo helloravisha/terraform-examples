@@ -93,7 +93,7 @@ Covers **Terraform workspaces**, which are used to manage multiple environments 
 
 ---
 
-## 🚀 Getting Started
+##  Getting Started
 
 Each folder contains its own `main.tf`, `variables.tf`, and `outputs.tf` (where relevant). To get started with any example:
 
