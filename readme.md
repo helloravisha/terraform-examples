@@ -76,10 +76,6 @@ Demonstrates best practices for **handling secrets** in Terraform using:
 
 ### 8. `terraform-state-management`
 State management in Terraform is necessary to track the current infrastructure's configuration, enabling Terraform to determine what changes are required to reach the desired state during execution.
-
-- Backends  
-- Remote state  
-- Locking and state file security  
   ```bash
   terraform {
     backend "s3" {
