@@ -63,9 +63,15 @@ Shows how to use **provisioners** like `remote-exec` and `file` to perform actio
 ---
 
 ### 7. `terraform-secret` - "To create , store and read secret using external secret manager from AWS"
-Demonstrates best practices for **handling secrets** in Terraform using:
 
 - creating secret - resource "aws_secretsmanager_secret"
+```bash
+resource "aws_secretsmanager_secret" "example" {
+  name        = "example_secret"
+  description = "Example secret for Terraform"
+}
+
+```  
 - adding values to secret
 ```bash
 # Store the secret value (username and password)
