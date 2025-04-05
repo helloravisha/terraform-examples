@@ -79,17 +79,17 @@ Examples related to **Terraform state** operations:
 
 - Backends  
 - Remote state  
-- Locking and state file security
-- ```bash
-terraform {
-  backend "s3" {
-    bucket = "ravisha-terraform-state"  # Replace with your bucket name
-    key    = "terraform/state.tfstate"
-    region = "us-east-2"
-    dynamodb_table = "my-terraform-lock"  # Table to use for state locking
+- Locking and state file security  
+  ```bash
+  terraform {
+    backend "s3" {
+      bucket = "ravisha-terraform-state"  # Replace with your bucket name
+      key    = "terraform/state.tfstate"
+      region = "us-east-2"
+      dynamodb_table = "my-terraform-lock"  # Table to use for state locking
+    }
   }
-}
-```
+
 
 - ✅ Configure remote backend (e.g., S3 + DynamoDB)
 
