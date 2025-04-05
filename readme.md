@@ -82,7 +82,7 @@ Used to manage multiple environments (e.g., `dev`, `staging`, `prod`) using the 
 
 ---
 
-## ✅ Common Workspace Commands
+ Common Workspace Commands
 
 - **Create and switch to a new workspace**
   ```bash
