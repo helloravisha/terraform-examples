@@ -51,7 +51,21 @@ Demonstrates how to organize and reuse code via **Terraform modules**.
 - ✅ Create and consume local modules  
 - ✅ Pass variables and outputs between modules  
 - ✅ Showcase module best practices
+```bash
+  provisioner "remote-exec" {
+    connection {
+      type        = "ssh"
+      user        = "ubuntu"  # Default user for Ubuntu AMIs
+      private_key = file("~/.ssh/my-ec2-key")  # Path to your private key
+      host        = aws_instance.example.public_ip  # Use the public IP of the instance
+    }
 
+    inline = [
+      "sudo apt-get update",
+      "sudo apt-get install -y nginx",  # Example command to install nginx
+    ]
+  }
+``` 
 ---
 
 ### 6. `terraform-provisioner`- "To execute sonmething locally where terraform  running or remotley on the reosurce "
@@ -62,6 +76,7 @@ Shows how to use **provisioners** like `remote-exec` and `file` to perform actio
 
 - ✅ Use inline shell scripts for post-creation setup  
 - ✅ Upload files and configure remote machines
+- 
 
 ---
 
