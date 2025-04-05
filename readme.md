@@ -76,12 +76,49 @@ Examples related to **Terraform state** operations:
 
 ---
 
-### 9. `terraform-workspaces`
-Covers **Terraform workspaces**, which are used to manage multiple environments (e.g., dev, staging, prod) from the same configuration.
+### 9. `terraform-workspaces` – "Same code, different environments or states."
 
-- ✅ Create and switch workspaces
-- ✅ Isolate resources by environment
-- ✅ Workspace-aware variables
+Covers **Terraform Workspaces**, which are used to manage multiple environments (e.g., `dev`, `staging`, `prod`) using the same configuration. Each workspace has its own `.tfstate` file behind the scenes, keeping environment states isolated.
+
+---
+
+## ✅ Common Workspace Commands
+
+- **Create and switch to a new workspace**
+  ```bash
+  terraform workspace new dev
+  ```
+
+- **List all workspaces**
+  ```bash
+  terraform workspace list
+  ```
+
+- **Show the current workspace**
+  ```bash
+  terraform workspace show
+  ```
+
+---
+
+## ⚠️ When *Not* to Use Workspaces
+
+Terraform workspaces are **not ideal** for managing **completely different infrastructure setups**. In such cases, it's better to use:
+
+- Separate directories (e.g., `envs/dev/`, `envs/prod/`)
+- Separate Terraform backends
+
+**Examples:**
+
+- `prod` is in one AWS region and `dev` is in another  
+- `prod` uses **RDS**, while `dev` uses **SQLite**
+
+---
+
+## ✅ Best Practices
+
+- Use workspaces when environments are structurally the same, but need isolated states.
+- Use environment-specific variables via `terraform.tfvars` or `locals`.
 
 ---
 
