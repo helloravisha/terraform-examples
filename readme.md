@@ -78,7 +78,7 @@ Examples related to **Terraform state** operations:
 
 ### 9. `terraform-workspaces` – "Same code, different environments or states."
 
-Covers **Terraform Workspaces**, which are used to manage multiple environments (e.g., `dev`, `staging`, `prod`) using the same configuration. Each workspace has its own `.tfstate` file behind the scenes, keeping environment states isolated.
+Used to manage multiple environments (e.g., `dev`, `staging`, `prod`) using the same configuration. Each workspace has its own `.tfstate` file behind the scenes, keeping environment states isolated.
 
 ---
 
