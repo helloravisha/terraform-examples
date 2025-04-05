@@ -37,11 +37,40 @@ Showcases usage of **built-in Terraform functions** such as `join`, `lookup`, `e
 
 ---
 
-### 4. `terraform-datasources`
-Examples demonstrating how to use Terraform **data sources** to fetch and reference information defined outside the Terraform configuration (e.g., AWS AMIs, existing infrastructure).
+### 4. `terraform-datasources` - "helps to fetch data from external resource ( Eg VPC, Security group ) or  invoking an API for Data "
+- ✅ Lookup resources in external systems
+- ✅ Invoking API
+```bash
+data "http" "example" {
+  url = "https://api.example.com/data"
+}
 
-- ✅ Lookup resources in external systems  
-- ✅ Use data sources with modules and locals
+output "api_response" {
+  value = data.http.example.body
+}
+``` 
+- ✅ querying s3
+```bash
+data "aws_s3_bucket" "existing_bucket" {
+  bucket = "my-existing-bucket"
+}
+
+output "bucket_region" {
+  value = data.aws_s3_bucket.existing_bucket.region
+}
+
+``` 
+- ✅ querying security group
+```bash
+data "aws_security_group" "existing_sg" {
+  name = "my-security-group"
+}
+
+output "security_group_id" {
+  value = data.aws_security_group.existing_sg.id
+}
+
+```
 
 ---
 
