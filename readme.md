@@ -54,7 +54,10 @@ Demonstrates how to organize and reuse code via **Terraform modules**.
 
 ---
 
-### 6. `terraform-provisioner`
+### 6. `terraform-provisioner`- "To execute sonmething locally where terraform  running or remotley on the reosurce "
+Eg :  installing software, running commands, or uploading files. 
+While useful for basic tasks, it's better to use dedicated configuration management tools (like Ansible or Chef) for more complex provisioning, as Terraform provisioners are intended for quick, one-time actions.
+
 Shows how to use **provisioners** like `remote-exec` and `file` to perform actions on a resource after it's created.
 
 - ✅ Use inline shell scripts for post-creation setup  
