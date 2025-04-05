@@ -33,8 +33,6 @@ Examples on using **`for_each`**, **`count`**, and **`for` loops** in Terraform 
 Showcases usage of **built-in Terraform functions** such as `join`, `lookup`, `element`, `concat`, etc.
 
 - ✅ Explore string, numeric, and collection functions  
-- ✅ Demonstrates interpolation and dynamic expressions
-
 ---
 
 ### 4. `terraform-datasources` - "helps to fetch data from external resource ( Eg VPC, Security group ) or  invoking an API for Data "
