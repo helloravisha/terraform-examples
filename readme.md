@@ -75,7 +75,7 @@ Demonstrates best practices for **handling secrets** in Terraform using:
 ---
 
 ### 8. `terraform-state-management`
-Examples related to **Terraform state** operations:
+State management in Terraform is necessary to track the current infrastructure's configuration, enabling Terraform to determine what changes are required to reach the desired state during execution.
 
 - Backends  
 - Remote state  
