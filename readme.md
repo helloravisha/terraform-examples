@@ -45,13 +45,24 @@ Examples demonstrating how to use Terraform **data sources** to fetch and refere
 
 ---
 
-### 5. `terraform-modules`
-Demonstrates how to organize and reuse code via **Terraform modules**.
+### 5. `terraform-modules` "helps us to oraganiize infrasturecture resources and reuse them as required "
 
 - ✅ Create and consume local modules  
-- ✅ Pass variables and outputs between modules  
-- ✅ Showcase module best practices
+- ✅ You can invoke the ec2-instance module, located in the modules folder, and call the same module elsewhere with different inputs.
+```bash
+provider "aws" {
+  region = "us-east-2"
+}
 
+module "ec2-instance" {
+  source        = "./modules/ec2-instance"
+  ami_id        = "ami-0c55b159cbfafe1f0"  # Example AMI ID
+  instance_type = "t2.micro"
+  subnet_id     = "subnet-0f38c180e19c7dbff"
+  instance_name = "example-instance"
+}
+
+```  
 ---
 
 ### 6. `terraform-provisioner`- "To execute sonmething locally where terraform  running or remotley on the reosurce "
