@@ -2,25 +2,17 @@
 
 This repository contains a collection of practical Terraform examples demonstrating various features.
 
+##  Getting Started
 
+Each folder contains its own `main.tf`, `variables.tf`, and `outputs.tf` (where relevant). To get started with any example:
 
-### 1. `terraform-datasources`
-Examples demonstrating how to use Terraform **data sources** to fetch and reference information defined outside the Terraform configuration (e.g., AWS AMIs, existing infrastructure).
+```bash
+cd terraform-helloworld
+terraform init
+terraform plan
+terraform apply
 
-- ✅ Lookup resources in external systems
-- ✅ Use data sources with modules and locals
-
----
-
-### 2. `terraform-functions`
-Showcases usage of **built-in Terraform functions** such as `join`, `lookup`, `element`, `concat`, etc.
-
-- ✅ Explore string, numeric, and collection functions
-- ✅ Demonstrates interpolation and dynamic expressions
-
----
-
-### 3. `terraform-helloworld`
+### 1. `terraform-helloworld`
 A simple "Hello World"-style example to bootstrap Terraform learning.
 
 - ✅ Configure a basic provider (like AWS)
@@ -28,12 +20,28 @@ A simple "Hello World"-style example to bootstrap Terraform learning.
 
 ---
 
-### 4. `terraform-loops`
+### 2. `terraform-loops`
 Examples on using **`for_each`**, **`count`**, and **`for` loops** in Terraform to dynamically create resources.
 
 - ✅ `for_each` with maps and sets
 - ✅ `count` for dynamic scaling
 - ✅ Looping over complex structures
+
+---
+
+### 3. `terraform-functions`
+Showcases usage of **built-in Terraform functions** such as `join`, `lookup`, `element`, `concat`, etc.
+
+- ✅ Explore string, numeric, and collection functions
+- ✅ Demonstrates interpolation and dynamic expressions
+
+---
+
+### 4. `terraform-datasources`
+Examples demonstrating how to use Terraform **data sources** to fetch and reference information defined outside the Terraform configuration (e.g., AWS AMIs, existing infrastructure).
+
+- ✅ Lookup resources in external systems
+- ✅ Use data sources with modules and locals
 
 ---
 
@@ -73,7 +81,6 @@ Examples related to **Terraform state** operations:
 
 - ✅ Configure remote backend (e.g., S3 + DynamoDB)
 
-
 ---
 
 ### 9. `terraform-workspaces` – "Same code, different environments or states."
@@ -98,7 +105,6 @@ Used to manage multiple environments (e.g., `dev`, `staging`, `prod`) using the 
   ```bash
   terraform workspace show
   ```
-
 ---
 
 ## ⚠️ When *Not* to Use Workspaces
@@ -122,12 +128,4 @@ Terraform workspaces are **not ideal** for managing **completely different infra
 
 ---
 
-##  Getting Started
 
-Each folder contains its own `main.tf`, `variables.tf`, and `outputs.tf` (where relevant). To get started with any example:
-
-```bash
-cd terraform-helloworld
-terraform init
-terraform plan
-terraform apply
