@@ -85,6 +85,7 @@ State management in Terraform is necessary to track the current infrastructure's
       dynamodb_table = "my-terraform-lock"  # Table to use for state locking
     }
   }
+```
 
 
 - ✅ Configure remote backend (e.g., S3 + DynamoDB)
