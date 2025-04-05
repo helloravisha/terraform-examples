@@ -62,15 +62,33 @@ Shows how to use **provisioners** like `remote-exec` and `file` to perform actio
 
 ---
 
-### 7. `terraform-secret`
+### 7. `terraform-secret` - "To create , store and read secret using external secret manager"
 Demonstrates best practices for **handling secrets** in Terraform using:
 
-- Environment variables  
-- Sensitive variables  
+- creating secret - resource "aws_secretsmanager_secret"
+- adding values to secret
+```bash
+# Store the secret value (username and password)
+resource "aws_secretsmanager_secret_version" "example" {
+  secret_id     = aws_secretsmanager_secret.example.id
+  secret_string = jsonencode({
+    username = "example_user"
+    password = "example_password"
+  })
+}
+```  
+- read the data
+```bash
+# read  the secret value (username and password)
+data "aws_secretsmanager_secret" "example" {
+  arn = aws_secretsmanager_secret.example.arn
+}
+```   
 - External secret managers (e.g., AWS Secrets Manager)
 
 - ✅ Avoid committing secrets to version control  
 - ✅ Use Terraform’s `sensitive = true` flag
+- ✅ Environment variables can also be used for secret input
 
 ---
 
