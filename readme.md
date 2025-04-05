@@ -48,7 +48,7 @@ Examples demonstrating how to use Terraform **data sources** to fetch and refere
 ### 5. `terraform-modules` - "helps us to oraganiize infrasturecture resources and reuse them as required "
 
 - ✅ Create and consume local modules  
-- ✅ You can invoke the ec2-instance module, located in the modules folder, and call the same module elsewhere with different inputs.
+- ✅ invoking ec2-instance module, located in the modules folder, and call the same module elsewhere with different inputs.
 ```bash
 provider "aws" {
   region = "us-east-2"
