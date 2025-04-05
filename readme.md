@@ -62,7 +62,7 @@ Shows how to use **provisioners** like `remote-exec` and `file` to perform actio
 
 ---
 
-### 7. `terraform-secret` - "To create , store and read secret using external secret manager"
+### 7. `terraform-secret` - "To create , store and read secret using external secret manager from AWS"
 Demonstrates best practices for **handling secrets** in Terraform using:
 
 - creating secret - resource "aws_secretsmanager_secret"
@@ -84,8 +84,6 @@ data "aws_secretsmanager_secret" "example" {
   arn = aws_secretsmanager_secret.example.arn
 }
 ```   
-- External secret managers (e.g., AWS Secrets Manager)
-
 - ✅ Avoid committing secrets to version control  
 - ✅ Use Terraform’s `sensitive = true` flag
 - ✅ Environment variables can also be used for secret input
